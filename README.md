@@ -1,27 +1,63 @@
-# Jekyll Example
+[Hux Blog](https://huangxuan.me)
+================================
 
-This directory is a brief example of a [Jekyll](https://jekyllrb.com/) site that can be deployed with Vercel and zero configuration.
+> I never expected this becomes popular.
 
-## Deploy Your Own
+![](http://huangxuan.me/img/blog-desktop.jpg)
 
-Deploy your own Jekyll project with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/master/examples/jekyll)
+[User Manual 👉](_doc/Manual.md)
+--------------------------------------------------
 
-_Live Example: https://jekyll.now-examples.now.sh_
+### Getting Started
 
-### How We Created This Example
+1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
 
-To get started with Jekyll for deployment with Vercel, you can use the [Jekyll CLI](https://jekyllrb.com/docs/usage/) to initialize the project:
+2. Installed dependencies in the `Gemfile`:
 
-```shell
-$ jekyll new my-blog
+```sh
+$ bundle install 
 ```
 
-### Deploying From Your Terminal
+3. Serve the website (`localhost:4000` by default):
 
-You can deploy your new Jekyll project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
+```sh
+$ bundle exec jekyll serve  # alternatively, npm start
 ```
+
+### Development (Build From Source)
+
+To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
+
+Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
+
+Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
+
+This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
+
+
+### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+
+
+Other Resources
+---------------
+
+Ports
+- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
+- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+
+[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
+- Out of date. Helps wanted for updating it on par with the main repo
+
+Translation
+- [🇨🇳 (somewhat outdated)](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+
+
+License
+-------
+
+Apache License 2.0.
+Copyright (c) 2015-present Huxpro
+
+Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+Copyright (c) 2013-2016 Blackrock Digital LLC.
