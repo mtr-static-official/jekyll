@@ -1,15 +1,9 @@
 ---
-title: 第一次正式的写博客
+title: MTR视频站正式开站🌶
 ---
 
-大家好！
+测试视频
 
-是我，MTR。您可能没听过本人的名字，是因为本人之前一直销声匿迹。
-
-这是我决定正式地写博客的第5次，希望我不在咕。
-
-评论系统正在进行制作。
-
-感谢GitHub的源码储存，Vercel的建站服务，CloudFlare的CDN。
-
-下一期博文：我安装黑苹果的过程与坑，还有后续
+<video id="video">
+<source id="mp4" src="https://cdn.jsdelivr.net/gh/mtr-static-official/mtrVid/testVid.mp4" type="video/mp4">
+</video>
